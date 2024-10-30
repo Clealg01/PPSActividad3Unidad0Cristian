@@ -4,8 +4,7 @@
 
 Para comenzar debemos instalar la aplicación de keepass en nuestro sistema. En este caso, utillizaremos un sistema Windows para poder realizar la práctica, puesto que en Linux el plugin que utilizaremos para sincronizar las bases de datos con el Drive no funciona correctamente y genera problemas. 
 
-![](/uploads/upload_8a06ea02ac3352ae3046ef132edc3e8e.png)
-![Imagen 1: Creación de carpetas](./keepass_caps/añadir plugin en la carpeta.png)
+![Imagen 1: Creación de carpetas](./keepass_caps/descarga de plugin.PNG)
 <div style="text-align: center;">
   <em>Imagen 1: Creación de carpetas</em>
 </div>

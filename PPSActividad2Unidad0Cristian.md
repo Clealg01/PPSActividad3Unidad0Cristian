@@ -1,10 +1,26 @@
+| UTILIZACIÓN DE KEEPASS |
+|:-----------------------:|
+
 <h1 style="text-align: center; text-decoration: underline;">UTILIZACIÓN DE KEEPASS</h1>
 
+# UTILIZACIÓN DE KEEPASS
+---
+
+
 <h3 style="text-align: center;">Paso 1: Descarga de la plicación</h3>
+
+==================
+UTILIZACIÓN DE KEEPASS
+==================
 
 Para comenzar debemos instalar la aplicación de keepass en nuestro sistema. En este caso, utillizaremos un sistema Windows para poder realizar la práctica, puesto que en Linux el plugin que utilizaremos para sincronizar las bases de datos con el Drive no funciona correctamente y genera problemas. 
 
 ![Imagen 1: Creación de carpetas](./keepass_caps/descarga%20de%20plugin.PNG)
+# UTILIZACIÓN DE KEEPASS
+---
+<p align="center">
+  <img src="./keepass_caps/descarga%20de%20plugin.PNG" alt="Texto alternativo">
+</p>
 <div style="text-align: center;">
   <em>Imagen 1: Creación de carpetas</em>
 </div>

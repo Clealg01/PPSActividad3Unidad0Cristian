@@ -1,115 +1,74 @@
-# LENGUAJE DE ETIQUETAS CODIMD
-<h3 style="text-align: center;">Paso 1: Crear la estructura de carpetas</h3>
+# Instalación y Configuración de Git
 
-Para comenzar debemos tener instalado docker en la máquina para poder levantar un contenedor y poder realizar el documento con codiMD
+En esta guía aparece todo los pasos a llevar a cabo para la instalación y configuración de Git en nuestros equipos, para comenzar a gestionar tus proyectos de manera eficiente. Principalmente usaremos un entorno Linux para gestionar Git, pero se explicará la instalación en otros entornos.
 
-![](/uploads/upload_8a06ea02ac3352ae3046ef132edc3e8e.png)
-<div style="text-align: center;">
-  <em>Imagen 1: Creación de carpetas</em>
+
+## 1. Instalación de Git
+
+### En Windows:
+1. Descarga el instalador de Git desde [git-scm.com](https://git-scm.com/).
+2. Ejecuta el instalador y sigue las instrucciones del asistente de instalación.
+3. Acepta las opciones predeterminadas a menos que necesites una configuración específica.
+4. Verifica la instalación abriendo el **Símbolo del sistema** o **PowerShell** y ejecutando:
+   ```bash
+   git --version
+
+### En Linux (Ubuntu/Debian):
+1. Actualiza el índice de paquetes de tu sistema:
+   ```bash
+   sudo apt update
+2. Instala Git:
+   ```bash
+   sudo apt install git
+3. Verifica la instalación:
+   ```bash
+   git --version
+
+### En macOS:
+1. Instala Homebrew si no lo tienes:
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Instala Git con Homebrew:
+   ```bash
+   brew install git
+3. Verifica la instalación:
+   ```bash
+   git --version
+
+---
+
+## 2. Configuración inicial de Git
+
+Después de instalar Git, es importante configurarlo con nuestro nombre y correo electrónico para que los commits estén correctamente identificados.
+### Configuración global:
+1. Configura tu nombre de usuario:
+   ```bash
+   git config --global user.name "Tu Nombre"
+
+2. Configura tu dirección de correo electrónico:
+   ```bash
+   git config --global user.email "tuemail@ejemplo.com"
+3. Verifica la instalación:
+   ```bash
+   git config --list
+
+### Configuraciones adicionales
+<div style="background-color: #f9f9f9; border-left: 6px solid #ffcc00; padding: 10px;">
+  <strong>Nota:</strong> Estas configuraciones no serán utilizadas para la práctica, por lo que no se incluirán ejemplos al final del documento pero servirán de guía para futuros requerimientos.
 </div>
 
-<h3 style="text-align: center;">Paso 2: Crear archivo "docker-compose.yaml"</h3>
+1. Configuración del Editor de Texto preferido para redactar mensajes de commit:
+   ```bash
+   git config --global core.editor "vim" # O reemplaza "vim" con tu editor favorito (nano, code, etc.)
 
-He creado una carpeta en documentos llamada PPS, para actividades de la asignatura. Creamos una carpeta para docker y dentro creamos una carpeta específica para codiMD.
+2. Configurar la Rama Predeterminada:
+   ```bash
+   git config --global init.defaultBranch main
 
-Dentro de la carpeta codimd, creamos un archivo llamado docker-compose.yaml para descargar los repositorios y levantar el contenedor para la práctica, con el siguiente código, utilizando la herramienta nano para modificar el archivo:
-    
-```yaml
-version: '3'
-services:
-  database:
-    image: postgres:9.6
-    environment:
-      POSTGRES_DB: hackmd
-      POSTGRES_USER: hackmd
-      POSTGRES_PASSWORD: password
-    volumes:
-      - database:/var/lib/postgresql/data
-  codimd:
-    image: quay.io/codimd/server:latest
-    depends_on:
-      - database
-    environment:
-      CMD_DB_URL: postgres://hackmd:password@database:5432/hackmd
-      CMD_USECDN: "true"
-    ports:
-      - "3000:3000"
-    volumes:
-      - uploads:/codimd/public/uploads
-volumes:
-  database:
-  uploads:
-```
+---
 
-![](/uploads/upload_a7e888f7e0d12bd2ffbc02d893f16ddd.png)
-<div style="text-align: center;">
-  <em>Imagen 2: Creación de archivo docker-compose.yaml</em>
-</div>
-
-<h3 style="text-align: center;">Paso 3: Descargar y levantar repositorio</h3>
-
-Una vez hemos creado el archivo descargamos el repositorio y levantamos el repositorio de docker mediante el comando ```docker-compose up -d```:
-
-![](/uploads/upload_fcf76516c73d0394f8513f16e6abe6cb.png)
-<div style="text-align: center;">
-  <em>Imagen 3: Descargar y levantar repositorio</em>
-</div>
-
-<h3 style="text-align: center;">Paso 4: Acceder al repositorio y crear cuenta de codiMD</h3>
-
-Una vez levantado, entramos en el repositorio por el puerto 3000 y nos creamos una cuenta para codiMD
-
-![](/uploads/upload_de6e601134919952ec66cb50bdb4f2ec.png)
-<div style="text-align: center;">
-  <em>Imagen 4: Creación de cuenta para codeMC</em>
-</div>
-
-<h3 style="text-align: center;">Paso 5: Crear documentación</h3>
-    
-Por último, procedemos a realizar la documentación del informe mediante el uso de etiquetado con codiMC. Es importante ayudarse de guías para aprender la sintaxis del lenguaje
-
-    
-| ![](/uploads/upload_930f782caf98db7c4e616bb9720a4b61.png) | ![](/uploads/upload_e52271116bde81accc1676c2551cdfba.png) |
-|:---------------------------------------------------------:|:---------------------------------------------------------:|
-<div style="text-align: center;">
-  <em>Imagen 5: Creación de docimentación con codeMC y uso de guías</em>
-</div> <p>
-
-A continuación, dejo algunas de las etiquetas más usadas para esta práctica, como ejemplos:
-    
-**1. Inclusión de imágenes en la documentación:**
-   - <u>Incluir imágenes:</u>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`![Imagen 1](ruta/de/imagen1.png)`
-
-   - <u>Juntar imagenes, una tras otra:</u>
-```
-    | ![Imagen 1](ruta/de/imagen1.png) | ![Imagen 2](ruta/de/imagen2.png) |
-    | :---------------------------------: | :---------------------------------: |
-```        
-**2. Inclusión de leyendas para las imágenes:**
-   - <u>Centrado de leyendas:</u>
-```
-    <div style="text-align: center;">
-       Leyenda centrada de la imagen
-    </div>
-```
-     
-**3. Inclusión de encabezados**
-   - <u>Título principal</u>
-       `# Título principal`
-       
-   - <u>Subtítulos</u>
-       `### Título secundario`
-
-**4. Uso de <em>Italics</em>**
-   - <u><em>Cursiva</em></u>
-       `<em>texto en cursiva</em>`
-       
-   - <u>**Negrita**</u>
-       `**Texto en Negrita**`
-
-   - <u>`Código`</u>
-       `'Texto en código'`
-   - <u>Subrayado</u>
-       `<u>Texto subrayado</u>`
+### Resultados, Ejemplos y Capturas de pantalla
+<p align="center">
+  <img src="./images/Descargar%20php.png" alt="Descarga de PHP">
+</p>

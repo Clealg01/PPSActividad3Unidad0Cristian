@@ -40,6 +40,7 @@ Para trabajar con un repositorio localmente:
 2. En tu terminal, ejecuta:
    ```bash
    git clone https://github.com/usuario/repositorio.git
+   ```
 ####
 | 1.5 Subir Archivos a un Repositorio|
 |:-----------------------:|

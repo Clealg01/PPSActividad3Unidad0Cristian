@@ -41,13 +41,13 @@ Para trabajar con un repositorio localmente:
    ```bash
    git clone https://github.com/usuario/repositorio.git
    ```
-####
+###
 | 1.5 Subir Archivos a un Repositorio|
 |:-----------------------:|
 1. Ve al repositorio y selecciona **Add file** > **Upload files**.
 2. Arrastra y suelta los archivos o selecciona los archivos desde tu equipo.
 3. Haz clic en **Commit changes** para confirmar.
-####
+###
 | 1.6 Crear y Gestionar Issues|
 |:-----------------------:|
 
@@ -57,7 +57,7 @@ Los issues permiten rastrear tareas, mejoras y errores en tu proyecto.
 2. Escribe un título y una descripción del problema o tarea.
 3. Asigna etiquetas y personas responsables si es necesario.
 4. Haz clic en **Submit new** issue para crearla.
-#### 
+###
 | 1.7 Crear un Pull Request|
 |:-----------------------:|
 
@@ -67,14 +67,14 @@ Los pull requests permiten colaborar en proyectos mediante la propuesta de cambi
 2. Selecciona la rama con tus cambios y la rama en la que deseas fusionarlos
 3. Revisa los cambios y haz clic en **Create pull request**.
 4. Añade una descripción y envía el pull request.
-####
+###
 | 1.8 Revisar y Aceptar Pull Requests|
 |:-----------------------:|
 1. Ve al pull request creado.
 2. Haz clic en **Files changed** para revisar los cambios.
 3. Usa **Review changes** para comentar, aprobar o solicitar cambios.
 4. Una vez aprobado, haz clic en **Merge pull request** y luego en **Confirm merge** para fusionar los cambios.
-####
+###
 |1.9 Configuración de Claves SSH|
 |:-----------------------:|
 1. Verificar si Ya Tienes Claves SSH.

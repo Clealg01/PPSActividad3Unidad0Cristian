@@ -6,34 +6,38 @@
 2. [Instalación y configuración de Git y PHP](./install.md#instalacion-y-configuracion-de-git-y-php)
    - [Instalación de Git](./install.md#instalación-de-Git)
    - [Instalación de PHP](./install.md#instalación-de-PHP)
-   - [Configuración inicial de Git](./install.md#configuración-inicial-de-Git)
+   - [Configuración inicial de Git](./install.md#3-configuración-inicial-de-git)
    - [Resultados, Ejemplos y Capturas de pantalla](./Install.md#4-resultados-ejemplos-y-capturas-de-pantalla)
-3. [Comandos principales de Git](#contenidos-del-repositorio)
-   - [Estructura del Repositorio](#estructura-del-repositorio)
-   - [Descripción de Archivos](#descripción-de-archivos)
-      - [README.md](#readmemd)
-      - [Install.md](#installmd)
-      - [UsoGit.md](#usogitmd)
-      - [GitHub.md](#githubmd)
-      - [GitLab.md](#gitlabmd)
-4. [Creación de cuenta y uso básico de Git](#pasos-detallados)
-   - [1. Crear Cuenta en GitHub](#1-crear-cuenta-en-github)
-   - [2. Instalar Git y PHP](#2-instalar-git-y-php)
-   - [3. Configurar Git y Añadir Clave SSH](#3-configurar-git-y-añadir-clave-ssh)
-   - [4. Crear Repositorio Local](#4-crear-repositorio-local)
-   - [5. Añadir y Modificar Archivos](#5-añadir-y-modificar-archivos)
-   - [6. Realizar Commit y Push](#6-realizar-commit-y-push)
-   - [7. Configuración de Claves SSH]()
-   - [8. Uso de Github Desktop]()
-5. [Referencias y Recursos Adicionales](#referencias-y-recursos-adicionales)
-6. [Todo sobre el repositorio](#referencias-y-recursos-adicionales)
-   - [Estructura del Repositorio](#estructura-del-repositorio)
-   - [Descripción de Archivos](#descripción-de-archivos)
-      - [README.md](#readmemd)
-      - [Install.md](#installmd)
-      - [UsoGit.md](#usogitmd)
-      - [GitHub.md](#githubmd)
-      - [GitLab.md](#gitlabmd)
+  
+3. [Comandos principales de Git](./UsoGit.md#Comandos-principales-de-Git)
+   - [Funciones y comandos básicos de GitHub](./UsoGit.md#Funciones-Básicas-de-GitHub)
+      - [Crear un Repositorio](./UsoGit.md#)
+      - [Clonar un Repositorio](./UsoGit.md#-1)
+      - [Subir Archivos a un Repositorio](./UsoGit.md#-2)
+      - [Crear y Gestionar Issues](./UsoGit.md#-3)
+      - [Crear un Pull Request](./UsoGit.md#-4)
+      - [Revisar y Aceptar Pull Requests](./UsoGit.md#-5)
+   - [Ejemplos prácticos y capturas](./UsoGit.md#resultados,-ejemplos-y-capturas-de-pantalla)
+
+4. [Creación de cuenta y uso básico de GitHub](./GitHub.md#1-funciones-básicas-de-github)
+   - [Funciones Básicas](./GitHub.md#Funciones-Básicas-de-GitHub)
+     - [Crear una Cuenta en GitHub](./GitHub.md#)
+     - [Iniciar sesión en la cuenta de GitHub](./GitHub.md#-1)
+     - [Crear un Repositorio](./GitHub.md#-2)
+     - [Clonar un Repositorio](./GitHub.md#-3)
+     - [Subir Archivos a un Repositorio](./GitHub.md#-4)
+     - [Crear y Gestionar Issues](./GitHub.md#-5)
+     - [Crear un Pull Request](./GitHub.md#-6)
+     - [Revisar y Aceptar Pull Requests](./GitHub.md#-7)
+     - [Configuración de Claves SSH](./GitHub.md#-8)
+   - [Ejemplos prácticos y capturas](./GitHub.md#2-capturas-y-ejemplos)
+
+5. [Contenidos del Repositorio](#contenidos-del-repositorio)
+      - [README.md](./README.md#índice)
+      - [Install.md](./Install.md)
+      - [UsoGit.md](./UsoGit.md)
+      - [GitHub.md](./GitHub.md)
+      - [GitLab.md (futuras prácticas)]()
 
 ---
 
@@ -44,81 +48,27 @@ Básicamente, se busca familiarizarse con el manejo de Git y GitHub, la document
 
 ---
 
-## Pasos a Realizar
+## Contenidos del Repositorio
 
+- [README.md](./README.md#índice): Archivo de inicio que contiene una introducción al proyecto y un índice con enlaces a las secciones principales y a otros archivos .md.
+- [Install.md](./Install.md): Documento que detalla el proceso de instalación y configuración de Git y PHP en Windows, Linux y macOS.
+- [UsoGit.md](./UsoGit.md): Contiene información sobre los comandos de Git más utilizados y ejemplos prácticos.
+- [GitHub.md](./GitHub.md): Explica cómo crear una cuenta en GitHub, iniciar sesión y usar sus funciones básicas.
+- [images/](./images/): Carpeta que almacena todas las imágenes referenciadas en los archivos de documentación para mantener un repositorio ordenado.
 
-| 1. Primeros Pasos|
-|:-----------------------:|
-- **Paso 1**: Abre una cuenta en [GitHub](https://github.com) con tu correo personal, en mi caso será con el correo institucional: `@informatica.iesvalledeljerteplasencia.es`.
-- **Paso 2**: Instala Git y PHP en tu equipo.
-
-En las siguientes imágenes podemos visualizar los comandos que necesitamos para la instalación de las tecnologías y como comprobar si las hemos instalado correctamente:
-
-![Descargar Git](./images/Descargar%20Git.png)
-<p align="center"><em>Figura 2: Descarga de Git</em></p>
-
-![Descargar PHP](./images/Descargar%20php.png)
-<p align="center"><em>Figura 3: Descarga de PHP</em></p>
-
-
-- **Paso 3**: Configura Git correctamente con tu cuenta.
-  - Crea una clave SSH y añádela a tu configuración de Git.
-  - Puedes consultar este [artículo de referencia](https://example.com) para más detalles sobre la creación de claves SSH.
-
-| 2. Uso de Git|
-|:-----------------------:|
-
-- **Paso 1**: Clona el repositorio recién creado en tu equipo:
   ```bash
-  git clone https://github.com/tuusuario/PPSActividad3Unidad0TuNombre.git
-- **Paso 2**: Añade los archivos y carpetas necesarios al proyecto.
-- **Paso 3**: Verifica el estado del repositorio:
-  ```bash
-  git status
-- **Paso 4**: Añade los archivos al índice:
-  ```bash
-  git add .
-- **Paso 5**: Haz un commit con un mensaje adecuado:
-  ```bash
-  git commit -m "Creación de archivos y estructura inicial"
-- **Paso 6**: Sube los cambios al repositorio remoto:
-  ```bash
-  git push origin main
-1. Creación de Contenedor GitLab
-Paso 1: Levanta un contenedor Docker con una instancia de GitLab.
-Utiliza el siguiente comando para ejecutar el contenedor:
-
-Paso 2: Configura y accede a GitLab en tu máquina local mediante el navegador en http://localhost.
-
-4. Contenidos del Repositorio
-README.md:
-Debe contener una introducción al proyecto.
-Incluir enlaces a otros archivos .md dentro del repositorio para facilitar la navegación.
-Install.md:
-Incluir el proceso de instalación y configuración de Git en el equipo local.
-Utilizar fragmentos de código en lugar de capturas de pantalla, por ejemplo:
-bash
-Copiar código
-git config --global user.name "Tu Nombre"
-git config --global user.email "tuemail@ejemplo.com"
-UsoGit.md:
-Describir los comandos de Git que se usaron durante la actividad, con ejemplos prácticos.
-GitHub.md:
-Explicar el proceso de creación de una cuenta en GitHub.
-Incluir los pasos para iniciar sesión y configurar el repositorio con claves SSH.
-GitLab.md:
-Documentar el proceso para levantar un contenedor Docker con GitLab y cómo configurarlo.
-Pasos Finales
-Realiza una comprobación con git status para asegurar que no hay archivos pendientes de añadir o subir.
-Verifica que todos los archivos y recursos se visualizan correctamente en el repositorio de GitHub.
-Asegúrate de que los enlaces internos de los archivos .md sean funcionales
-Desglose de los pasos generales que se deben realizar para completar esta práctica. Incluye detalles sobre la configuración inicial de Git y la creación de un contenedor GitLab.
-
-### Contenidos del Repositorio
-Descripción de los archivos y carpetas esenciales que debe contener el repositorio, como `README.md`, `Install.md`, `UsoGit.md`, `GitHub.md`, y `GitLab.md`.
-
-### Pasos Detallados
-Explicación de cada uno de los pasos a seguir, incluyendo la creación de la cuenta en GitHub, instalación y configuración de Git, creación del repositorio local, y los comandos básicos de Git para realizar `commit` y `push`.
-
-### Referencias y Recursos Adicionales
-Enlaces a artículos y documentación relevante, incluyendo el artículo sobre la creación de la clave SSH.
+   PPSActividad3Unidad0TuNombre/
+   │
+   ├── README.md                  # Archivo principal con introducción y enlaces a secciones y archivos relevantes.
+   │
+   ├── install.md                 # Documento explicando la instalación y configuración de Git y PHP.
+   │
+   ├── UsoGit.md                  # Archivo que describe los comandos principales utilizados en Git.
+   │
+   ├── GitHub.md                  # Explicación sobre la creación de una cuenta, login y uso básico de GitHub.
+   │
+   ├── images/                    # Carpeta que contiene todas las imágenes utilizadas en los archivos .md.
+   │   ├── DescargarGit.png
+   │   ├── DescargarPHP.png
+   │   ├── ClonarRepositorio.png
+   │   └── ... (otras imágenes)

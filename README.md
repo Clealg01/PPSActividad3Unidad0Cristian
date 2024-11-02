@@ -4,8 +4,8 @@
 
 1. [Introducción](#introducción)
 2. [Instalación y configuración de Git y PHP](./install.md#instalacion-y-configuracion-de-git-y-php)
-   - [Instalación de Git](./install.md#instalación-de-Git)
-   - [Instalación de PHP](./install.md#instalación-de-PHP)
+   - [Instalación de Git](./install.md#1-instalación-de-git)
+   - [Instalación de PHP](./install.md#2-instalación-de-php)
    - [Configuración inicial de Git](./install.md#3-configuración-inicial-de-git)
    - [Resultados, Ejemplos y Capturas de pantalla](./Install.md#4-resultados-ejemplos-y-capturas-de-pantalla)
   

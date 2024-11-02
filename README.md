@@ -3,10 +3,10 @@
 ## Índice
 
 1. [Introducción](#introducción)
-2. [Instalación y configuración de Git y PHP](./install.md#instalacion-y-configuracion-de-git-y-php)
-   - [Instalación de Git](./install.md#1-instalación-de-git)
-   - [Instalación de PHP](./install.md#2-instalación-de-php)
-   - [Configuración inicial de Git](./install.md#3-configuración-inicial-de-git)
+2. [Instalación y configuración de Git y PHP](./Install.md#instalacion-y-configuracion-de-git-y-php)
+   - [Instalación de Git](./Install.md#1-instalación-de-git)
+   - [Instalación de PHP](./Install.md#2-instalación-de-php)
+   - [Configuración inicial de Git](./Install.md#3-configuración-inicial-de-git)
    - [Resultados, Ejemplos y Capturas de pantalla](./Install.md#4-resultados-ejemplos-y-capturas-de-pantalla)
   
 3. [Comandos principales de Git](./UsoGit.md#Comandos-principales-de-Git)
